@@ -1,5 +1,5 @@
 {
-  "name": "weebpal/subsitutoo-template",
+  "name": "weebpal/substitutoo-template",
   "description": "subsitutoo Learning Management System",
   "type": "project",
   "license": "GPL-2.0-or-later",
@@ -19,7 +19,7 @@
     "composer/installers": "*",
     "cweagans/composer-patches": "^1.7",
     "drupal/core-composer-scaffold": "^10.0",
-    "weebpal/subsitutoo": "^1.0.0"
+    "weebpal/substitutoo": "^1.0.0"
   },
   "require-dev": {
     "drush/drush": "^10 || ^11 || ^12",

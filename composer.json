@@ -1,0 +1,77 @@
+{
+  "name": "weebpal/subsitutoo-template",
+  "description": "subsitutoo Learning Management System",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [],
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "asset-packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "require": {
+    "wikimedia/composer-merge-plugin": "2.0",
+    "composer/installers": "*",
+    "cweagans/composer-patches": "^1.7",
+    "drupal/core-composer-scaffold": "^10.0",
+    "weebpal/subsitutoo": "^1.0.0"
+  },
+  "require-dev": {
+    "drush/drush": "^10 || ^11 || ^12",
+    "mglaman/composer-drupal-lenient": "^1.0"
+  },
+  "replace": {},
+  "config": {
+    "sort-packages": false,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "wikimedia/composer-merge-plugin": true,
+      "drupal/console-extend-plugin": true,
+      "mglaman/composer-drupal-lenient": true
+    }
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": false
+  }
+}
